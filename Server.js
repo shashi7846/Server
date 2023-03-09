@@ -69,6 +69,12 @@ app.post("/login", async function (req, res) {
   }
 });
 
+app.post("/logout", (req, res) => {
+  res.status(200).json({
+    message: "user logged out successful",
+  });
+});
+
 app.get("/", (req, res) =>
   res.status(200).send("Welcome to server you are connected Now")
 );
